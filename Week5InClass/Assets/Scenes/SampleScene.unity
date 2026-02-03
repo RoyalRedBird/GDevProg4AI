@@ -971,6 +971,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1690295982}
+  - component: {fileID: 1690295985}
+  - component: {fileID: 1690295984}
+  - component: {fileID: 1690295983}
+  - component: {fileID: 1690295988}
+  - component: {fileID: 1690295987}
+  - component: {fileID: 1690295986}
   m_Layer: 0
   m_Name: Follower
   m_TagString: Untagged
@@ -994,6 +1000,152 @@ Transform:
   - {fileID: 1072378778}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690295983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690295981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBlackboard: {fileID: 0}
+  _serializedBlackboard: '{"_variables":{"targetPosition":{"_name":"targetPosition","_id":"b0b92110-6005-4dba-b909-5dbf6973b8de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"timeSinceLastSample":{"_name":"timeSinceLastSample","_id":"1bcab691-2331-4a51-9a90-c5498483adae","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"isMoving":{"_name":"isMoving","_id":"2ac5e97d-173a-4c3e-8d45-91aa07c9b942","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"seekTarget":{"_name":"seekTarget","_id":"8598caf1-43f3-4079-92f0-337da3e88641","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+  _objectReferences: []
+  _serializedVariables:
+  - _json: '{"_name":"targetPosition","_id":"b0b92110-6005-4dba-b909-5dbf6973b8de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_name":"timeSinceLastSample","_id":"1bcab691-2331-4a51-9a90-c5498483adae","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"isMoving","_id":"2ac5e97d-173a-4c3e-8d45-91aa07c9b942","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"seekTarget","_id":"8598caf1-43f3-4079-92f0-337da3e88641","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+--- !u!114 &1690295984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690295981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7dbb6bbdf4ffb46ab7dd87ba8191e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedExposedParameters: []
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"timeSinceLastSampleBBP":{"_name":"timeSinceLastSample","_targetVariableID":"1bcab691-2331-4a51-9a90-c5498483adae"},"targetPositionBBP":{"_name":"targetPosition","_targetVariableID":"b0b92110-6005-4dba-b909-5dbf6973b8de"},"isMovingBBP":{"_name":"isMoving","_targetVariableID":"2ac5e97d-173a-4c3e-8d45-91aa07c9b942"},"$type":"NodeCanvas.Tasks.Actions.WanderTask"}]},"_color":{"r":0.7204093,"g":1.0,"a":1.0},"_name":"Wander
+    State","_position":{"x":355.9027,"y":523.1945},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"targetPositionBBP":{"_name":"targetPosition","_targetVariableID":"b0b92110-6005-4dba-b909-5dbf6973b8de"},"seekTargetBBP":{"_name":"seekTarget","_targetVariableID":"8598caf1-43f3-4079-92f0-337da3e88641"},"$type":"NodeCanvas.Tasks.Actions.SeekTask"}]},"_color":{"r":0.2085929,"g":1.0,"a":1.0},"_name":"Seek
+    State","_position":{"x":508.0,"y":391.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"targetPositionBBP":{"_name":"targetPosition","_targetVariableID":"b0b92110-6005-4dba-b909-5dbf6973b8de"},"timeSinceLastSampleBBP":{"_name":"timeSinceLastSample","_targetVariableID":"1bcab691-2331-4a51-9a90-c5498483adae"},"isMovingBBP":{"_name":"isMoving","_targetVariableID":"2ac5e97d-173a-4c3e-8d45-91aa07c9b942"},"sampleRateInSeconds":0.5,"sampleRadiusInUnits":5.0,"$type":"NodeCanvas.Tasks.Actions.NavigationTask"}]},"_position":{"x":390.0,"y":195.0},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"variable":{"_name":"seekTarget","_targetVariableID":"8598caf1-43f3-4079-92f0-337da3e88641"},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckNull"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphObjectReferences: []
+  _boundGraphSource:
+    _version: 3.33
+    _category: 
+    _comments: 
+    _translation: {x: 164, y: -80}
+    _zoomFactor: 0.9113745
+  _firstActivation: 0
+  _enableAction: 0
+  _disableAction: 0
+  _lockBoundGraphPrefabOverrides: 1
+  _preInitializeSubGraphs: 0
+  _updateMode: 0
+  _graph: {fileID: 0}
+  _blackboard: {fileID: 1690295983}
+--- !u!195 &1690295985
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690295981}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 7
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 240
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!135 &1690295986
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690295981}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1690295987
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690295981}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1690295988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690295981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1716b60edc346dd4aa6b032a5fde97ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackboard: {fileID: 1690295983}
 --- !u!43 &1826783176
 Mesh:
   m_ObjectHideFlags: 0
@@ -1231,8 +1383,8 @@ GameObject:
   - component: {fileID: 1909524588}
   - component: {fileID: 1909524587}
   m_Layer: 0
-  m_Name: Nav Agemt
-  m_TagString: Untagged
+  m_Name: Nav Agent
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
