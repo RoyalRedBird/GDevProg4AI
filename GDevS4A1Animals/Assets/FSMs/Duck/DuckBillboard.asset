@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4fa5caed5fb2b43b903ef7859c9bf9, type: 3}
+  m_Name: DuckBillboard
+  m_EditorClassIdentifier: 
+  _serializedBlackboard: '{"_variables":{"targetDestination":{"_name":"targetDestination","_id":"5ae85fc1-33cd-4e50-8a15-c2afbd6f5cae","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"targetSeedPile":{"_name":"targetSeedPile","_id":"cf6f003d-17f6-4e0f-a6ca-e311ff6ee78d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"seedSearchRadius":{"_name":"seedSearchRadius","_id":"7fefd7e4-95f6-44fc-8b53-d66d9dfadbaa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"idleTimeCurrent":{"_name":"idleTimeCurrent","_id":"8eb76093-16a3-4e17-9a4c-3fd65c7163fa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"idleTime":{"_name":"idleTime","_id":"2a0a10fd-b700-4b18-9736-3dde3231fc72","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences: []
+  _UID: 39f2c58f-5c66-47fb-8d7e-5f4b7481a5b7
