@@ -1,37 +1,50 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-
+using UnityEngine;
+using UnityEngine.AI;
 
 namespace NodeCanvas.Tasks.Actions {
 
 	public class WanderAction : ActionTask {
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
-			return null;
-		}
+        public BBParameter<float> timeSinceLastSampleBBP;
+        public BBParameter<Vector3> targetPositionBBP;
+        public BBParameter<bool> isMovingBBP;
 
-		//This is called once each time the task is enabled.
-		//Call EndAction() to mark the action as finished, either in success or failure.
-		//EndAction can be called from anywhere.
-		protected override void OnExecute() {
-			EndAction(true);
-		}
+        public float wanderDistance = 4f;
+        public float wanderRadius = 3f;
 
-		//Called once per frame while the action is active.
-		protected override void OnUpdate() {
-			
-		}
+        protected override void OnUpdate()
+        {
 
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
+            if (timeSinceLastSampleBBP.value == 0 && isMovingBBP.value == false)
+            {
 
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
-		}
-	}
+                Vector3 destination = CalculateTargetPosition();
+
+                if (NavMesh.SamplePosition(destination, out NavMeshHit hitInfo, wanderDistance + wanderRadius, NavMesh.AllAreas))
+                {
+
+                    targetPositionBBP.value = hitInfo.position;
+
+                }
+
+            }
+
+        }
+
+        private Vector3 CalculateTargetPosition()
+        {
+
+            Vector3 circleCenter = agent.transform.position + agent.transform.forward * wanderDistance;
+            Vector3 randomPoint = Random.insideUnitSphere.normalized * wanderRadius;
+
+            Vector3 destination = circleCenter + randomPoint;
+
+            return destination;
+
+        }
+
+    }
+
 }
