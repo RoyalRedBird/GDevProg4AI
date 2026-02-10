@@ -1,30 +1,69 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Conditions {
 
 	public class SeedCheck : ConditionTask {
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit(){
-			return null;
-		}
+        public Blackboard duckBlackboard;
+        public BBParameter<float> seedSearchRadiusBBP;
+        public LayerMask seedMask;
 
-		//Called whenever the condition gets enabled.
-		protected override void OnEnable() {
-			
-		}
+        private Collider[] seedsFound;
 
-		//Called whenever the condition gets disabled.
-		protected override void OnDisable() {
-			
-		}
+        protected override string OnInit()
+        {
 
-		//Called once per frame while the condition is active.
-		//Return whether the condition is success or failure.
-		protected override bool OnCheck() {
+            duckBlackboard = agent.GetComponent<Blackboard>();
+
+            if(duckBlackboard == null )
+            {
+
+                return $"{agent.name} - SeedCheck: Blackboard not found.";
+
+            }
+            else
+            {
+
+                return null;
+
+            }
+
+            
+        }
+
+        //Called once per frame while the condition is active.
+        //Return whether the condition is success or failure.
+        protected override bool OnCheck() {
+
+            seedsFound = Physics.OverlapSphere(agent.transform.position, seedSearchRadiusBBP.value, seedMask);
+
+            GameObject closestSeedPile = null;
+            float closestPileDistance = 9999;
+
+            if(seedsFound.Length > 0 )
+            {
+
+                foreach(Collider seed in seedsFound)
+                {
+
+                    if(Vector3.Distance(agent.transform.position, seed.transform.position) < closestPileDistance ) {
+
+                        closestSeedPile = seed.gameObject;
+                        closestPileDistance = Vector3.Distance(agent.transform.position, seed.transform.position);
+
+                    }
+
+                }
+
+                Debug.Log("Seeds found!" + closestSeedPile.ToString() + " at " + closestSeedPile.transform.position);
+                duckBlackboard.SetVariableValue("targetSeedPile", closestSeedPile);
+                return true;
+
+            }
+
 			return false;
 		}
 	}
