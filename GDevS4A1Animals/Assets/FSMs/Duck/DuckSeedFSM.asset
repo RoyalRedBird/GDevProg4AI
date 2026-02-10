@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
   m_Name: DuckSeedFSM
   m_EditorClassIdentifier: 
-  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"target":{},"speed":{"_value":2.0},"angleDifference":{"_value":5.0},"upVector":{"_value":{"y":1.0}},"$type":"NodeCanvas.Tasks.Actions.RotateTowards"},{"target":{},"speed":{"_value":2.0},"stopDistance":{"_value":0.1},"$type":"NodeCanvas.Tasks.Actions.MoveTowards"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Seed
-    Rush","_position":{"x":883.0,"y":315.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"layerIndex":{},"stateName":{"_value":"DuckEatAnim"},"overrideAgent":{"_type":"UnityEngine.Animator"},"$type":"NodeCanvas.Tasks.Actions.MecanimPlayAnimation"},{"$type":"NodeCanvas.Tasks.Actions.DuckEatParticleAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Eating
-    Seeds","_position":{"x":1036.0,"y":418.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"target":{"_name":"targetSeedPile","_targetVariableID":"da042d37-9cb9-45b3-b96b-e01138179f9c"},"speed":{"_value":2.0},"angleDifference":{"_value":5.0},"upVector":{"_value":{"y":1.0}},"waitActionFinish":true,"$type":"NodeCanvas.Tasks.Actions.RotateTowards"},{"targetPositionBBP":{"_name":"targetDestination","_targetVariableID":"5ae85fc1-33cd-4e50-8a15-c2afbd6f5cae"},"targetSeedPileBBP":{"_name":"targetSeedPile","_targetVariableID":"da042d37-9cb9-45b3-b96b-e01138179f9c"},"$type":"NodeCanvas.Tasks.Actions.SetDestinationManualAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Seed
+    Rush","_position":{"x":787.0,"y":293.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.DuckEatParticleAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Eating
+    Seeds","_position":{"x":1036.0,"y":418.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"vectorA":{"_name":"duckPos","_targetVariableID":"15f7d0a2-6600-402b-b180-45b72fd09ccc"},"vectorB":{"_name":"targetSeedPile","_targetVariableID":"da042d37-9cb9-45b3-b96b-e01138179f9c"},"comparison":4,"distance":{"_value":0.5},"$type":"NodeCanvas.Tasks.Conditions.CheckVectorDistance"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _objectReferences: []
   _graphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -865, y: -231}
+    _translation: {x: -422, y: -48}
     _zoomFactor: 1
   _haltSerialization: 0
   _externalSerializationFile: {fileID: 0}

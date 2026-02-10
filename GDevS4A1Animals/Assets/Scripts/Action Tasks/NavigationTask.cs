@@ -10,6 +10,7 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<Vector3> targetPositionBBP;
         public BBParameter<float> timeSinceLastSampleBBP;
         public BBParameter<bool> isMovingBBP;
+        public BBParameter<Vector3> duckPosBBP;
 
         public float sampleRateInSeconds;
         public float sampleRadiusInUnits;
@@ -31,6 +32,8 @@ namespace NodeCanvas.Tasks.Actions {
 
         protected override void OnUpdate()
         {
+            
+            duckPosBBP.value = agent.transform.position;
 
             timeSinceLastSampleBBP.value += Time.deltaTime;
 
