@@ -12,15 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4fa5caed5fb2b43b903ef7859c9bf9, type: 3}
   m_Name: DuckBillboard
   m_EditorClassIdentifier: 
-  _serializedBlackboard: '{"_variables":{"targetDestination":{"_name":"targetDestination","_id":"5ae85fc1-33cd-4e50-8a15-c2afbd6f5cae","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"seedSearchRadius":{"_value":5.0,"_name":"seedSearchRadius","_id":"7fefd7e4-95f6-44fc-8b53-d66d9dfadbaa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"idleTimeCurrent":{"_name":"idleTimeCurrent","_id":"8eb76093-16a3-4e17-9a4c-3fd65c7163fa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"idleTime":{"_name":"idleTime","_id":"2a0a10fd-b700-4b18-9736-3dde3231fc72","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"isMoving":{"_name":"isMoving","_id":"cd8c8305-cf18-4d05-8991-f91b6e9434fa","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"waterParticles":{"_name":"waterParticles","_id":"264a9bac-2086-4b5e-b953-e13e205b08e0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"timeSinceLastSample":{"_name":"timeSinceLastSample","_id":"ecec68cd-41fe-486c-820f-d9cf05e29c51","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"humanFlee":{"_name":"humanFlee","_id":"14a7eaab-3c55-4f07-b14a-d3d4d93d1389","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"duckPos":{"_name":"duckPos","_id":"15f7d0a2-6600-402b-b180-45b72fd09ccc","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+  _serializedBlackboard: '{"_variables":{}}'
   _objectReferences: []
   _UID: 39f2c58f-5c66-47fb-8d7e-5f4b7481a5b7

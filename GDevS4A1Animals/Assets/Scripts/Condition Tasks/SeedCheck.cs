@@ -43,6 +43,19 @@ namespace NodeCanvas.Tasks.Conditions {
             GameObject closestSeedPile = null;
             float closestPileDistance = 9999;
 
+            foreach(Collider seedCheck in seedsFound)
+            {
+
+                if(seedCheck.GetComponent<SeedPileScript>().GetPileOccupied()) {
+
+                    Debug.Log($"{agent.name} - Found an occupied pile, ignoring.");
+                    seedCheck.GetComponent<SeedPileScript>().MarkPileAsOccupied();
+                    seedsFound = new Collider[0];
+
+                }
+
+            }
+
             if(seedsFound.Length > 0 )
             {
 
