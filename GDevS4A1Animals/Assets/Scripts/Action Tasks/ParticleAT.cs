@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class ParticleTask : ActionTask {
+	public class ParticleAT : ActionTask {
 
         public BBParameter<ParticleSystem> waterSplashParticleBBP;
 

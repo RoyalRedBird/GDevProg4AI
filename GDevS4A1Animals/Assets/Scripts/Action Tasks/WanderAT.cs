@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class WanderAction : ActionTask {
+	public class WanderAT : ActionTask {
 
         public BBParameter<float> timeSinceLastSampleBBP;
         public BBParameter<Vector3> targetPositionBBP;

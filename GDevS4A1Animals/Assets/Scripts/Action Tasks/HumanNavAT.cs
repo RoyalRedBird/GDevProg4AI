@@ -3,7 +3,7 @@ using ParadoxNotion.Design;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class HumanNavTask : ActionTask
+public class HumanNavAT : ActionTask
 {
 
     public BBParameter<Vector3> targetPositionBBP;

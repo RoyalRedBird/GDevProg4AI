@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Conditions {
 
-	public class SeedCheck : ConditionTask {
+	public class SeedCheckCT : ConditionTask {
 
         public Blackboard duckBlackboard;
         public BBParameter<float> seedSearchRadiusBBP;

@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
   m_Name: ChickFSM
   m_EditorClassIdentifier: 
-  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"waitTime":{"_value":0.1},"$type":"NodeCanvas.Tasks.Actions.Wait"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"WaitForInit
-    State","_position":{"x":647.0,"y":295.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"target":{"_name":"motherDuck","_targetVariableID":"a98bc2ad-6d5b-4b4b-9bc4-4e527afa911d"},"speed":{"_value":4.0},"keepDistance":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.MoveToGameObject"},{"lookTarget":{"_name":"motherDuck","_targetVariableID":"a98bc2ad-6d5b-4b4b-9bc4-4e527afa911d"},"$type":"NodeCanvas.Tasks.Actions.LookAt"}]},"_repeatStateActions":true,"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Follow
-    State","_position":{"x":815.0,"y":433.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.DestroyGameObject"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Terminate
-    Chick Instance","_position":{"x":438.0,"y":162.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"waterSplashParticleBBP":{},"groundMask":{"value":8},"$type":"NodeCanvas.Tasks.Actions.ParticleTask"}]},"_position":{"x":888.0,"y":134.0},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"variable":{"_name":"motherDuck","_targetVariableID":"a98bc2ad-6d5b-4b4b-9bc4-4e527afa911d"},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckNull"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"waitTime":{"_value":0.1},"$type":"NodeCanvas.Tasks.Actions.Wait"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Wait
+    For Init State","_position":{"x":647.0,"y":295.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"target":{"_name":"motherDuck","_targetVariableID":"a98bc2ad-6d5b-4b4b-9bc4-4e527afa911d"},"speed":{"_value":4.0},"keepDistance":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.MoveToGameObject"},{"lookTarget":{"_name":"motherDuck","_targetVariableID":"a98bc2ad-6d5b-4b4b-9bc4-4e527afa911d"},"$type":"NodeCanvas.Tasks.Actions.LookAt"}]},"_repeatStateActions":true,"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Follow
+    Mama Duck State","_position":{"x":783.0,"y":387.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.DestroyGameObject"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Terminate
+    Chick Instance","_position":{"x":477.0,"y":200.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"waterSplashParticleBBP":{},"groundMask":{"value":8},"$type":"NodeCanvas.Tasks.Actions.ParticleAT"}]},"_position":{"x":798.0,"y":198.0},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"variable":{"_name":"motherDuck","_targetVariableID":"a98bc2ad-6d5b-4b4b-9bc4-4e527afa911d"},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckNull"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _objectReferences: []
   _graphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 0, y: 0}
+    _translation: {x: -457, y: -138}
     _zoomFactor: 1
   _haltSerialization: 0
   _externalSerializationFile: {fileID: 0}
